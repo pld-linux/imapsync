@@ -1,4 +1,4 @@
-%include        /usr/lib/rpm/macros.perl
+%include	/usr/lib/rpm/macros.perl
 Summary:	Mailboxes synchronization tool
 Name:		imapsync
 Version:	1.133
