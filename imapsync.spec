@@ -6,7 +6,7 @@ Release:	1
 License:	GPL
 Group:		Applications/Mail
 Source0:	http://www.linux-france.org/prj/imapsync/dist/%{name}-%{version}.tgz
-# Source0-md5:	4b2f2cdd2a04e7e0ef65c9ca15f4481f
+# Source0-md5:	dea4a2844652fabe90ee2bfe52fab1e2
 URL:		http://www.linux-france.org/prj/imapsync/
 BuildRequires:	rpmbuild(macros) >= 1.202
 BuildRequires:	rpm-perlprov >= 4.1-13
