@@ -11,7 +11,6 @@ Source0:	http://www.linux-france.org/prj/imapsync/dist/%{name}-%{version}.tgz
 URL:		http://www.linux-france.org/prj/imapsync/
 BuildRequires:	perl-Mail-IMAPClient
 BuildRequires:	perl-Term-ReadKey
-BuildRequires:	perl-base
 BuildRequires:	rpm-perlprov >= 4.1-13
 BuildRequires:	rpmbuild(macros) >= 1.202
 BuildArch:	noarch
