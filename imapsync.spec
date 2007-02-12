@@ -1,6 +1,6 @@
 %include	/usr/lib/rpm/macros.perl
 Summary:	Mailboxes synchronization tool
-Summary(pl):	Narzêdzie do synchroniczacji skrzynek pocztowych
+Summary(pl.UTF-8):   NarzÄ™dzie do synchroniczacji skrzynek pocztowych
 Name:		imapsync
 Version:	1.133
 Release:	1
@@ -25,14 +25,14 @@ deleted flags are preserved, and the process can be stopped and
 resumed. The original messages can optionally be deleted after a
 successful transfer.
 
-%description -l pl
-imapsync to narzêdzie u³atwiaj±ce przyrostowe rekurencyjne transfery
+%description -l pl.UTF-8
+imapsync to narzÄ™dzie uÅ‚atwiajÄ…ce przyrostowe rekurencyjne transfery
 IMAP z jednej skrzynki do drugiej. Jest przydatne do migracji skrzynek
-pocztowych i zmniajsza ilo¶æ przesy³anych danych kopiuj±c tylko
-wiadomo¶ci nie obecne na obu serwerach. Flagi oznaczaj±ce wiadomo¶ci
-przeczytane, nieprzeczytane i usuniête s± zachowywane, a proces mo¿e
-byæ zatrzymany i wznowiony. Oryginalne wiadomo¶ci opcjonalnie mog± byæ
-usuniête po udanym przes³aniu.
+pocztowych i zmniajsza iloÅ›Ä‡ przesyÅ‚anych danych kopiujÄ…c tylko
+wiadomoÅ›ci nie obecne na obu serwerach. Flagi oznaczajÄ…ce wiadomoÅ›ci
+przeczytane, nieprzeczytane i usuniÄ™te sÄ… zachowywane, a proces moÅ¼e
+byÄ‡ zatrzymany i wznowiony. Oryginalne wiadomoÅ›ci opcjonalnie mogÄ… byÄ‡
+usuniÄ™te po udanym przesÅ‚aniu.
 
 %prep
 %setup -q
