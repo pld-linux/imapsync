@@ -1,6 +1,6 @@
 %include	/usr/lib/rpm/macros.perl
 Summary:	Mailboxes synchronization tool
-Summary(pl.UTF-8):   Narzędzie do synchroniczacji skrzynek pocztowych
+Summary(pl.UTF-8):	Narzędzie do synchroniczacji skrzynek pocztowych
 Name:		imapsync
 Version:	1.133
 Release:	1
