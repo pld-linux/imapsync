@@ -30,7 +30,7 @@ imapsync to narzędzie ułatwiające przyrostowe rekurencyjne transfery
 IMAP z jednej skrzynki do drugiej. Jest przydatne do migracji skrzynek
 pocztowych i zmniajsza ilość przesyłanych danych kopiując tylko
 wiadomości nie obecne na obu serwerach. Flagi oznaczające wiadomości
-przeczytane, nieprzec1;2c1;2c1;2czytane i usunięte są zachowywane, a proces może
+przeczytane, nieprzeczytane i usunięte są zachowywane, a proces może
 być zatrzymany i wznowiony. Oryginalne wiadomości opcjonalnie mogą być
 usunięte po udanym przesłaniu.
 
