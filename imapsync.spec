@@ -2,12 +2,12 @@
 Summary:	Mailboxes synchronization tool
 Summary(pl.UTF-8):	Narzędzie do synchroniczacji skrzynek pocztowych
 Name:		imapsync
-Version:	1.133
+Version:	1.213
 Release:	1
 License:	GPL
 Group:		Applications/Mail
 Source0:	http://www.linux-france.org/prj/imapsync/dist/%{name}-%{version}.tgz
-# Source0-md5:	dea4a2844652fabe90ee2bfe52fab1e2
+# Source0-md5:	bb3dcf1e4c13a636756557304c98216d
 URL:		http://www.linux-france.org/prj/imapsync/
 BuildRequires:	perl-Mail-IMAPClient
 BuildRequires:	perl-Term-ReadKey
@@ -30,7 +30,7 @@ imapsync to narzędzie ułatwiające przyrostowe rekurencyjne transfery
 IMAP z jednej skrzynki do drugiej. Jest przydatne do migracji skrzynek
 pocztowych i zmniajsza ilość przesyłanych danych kopiując tylko
 wiadomości nie obecne na obu serwerach. Flagi oznaczające wiadomości
-przeczytane, nieprzeczytane i usunięte są zachowywane, a proces może
+przeczytane, nieprzec1;2c1;2c1;2czytane i usunięte są zachowywane, a proces może
 być zatrzymany i wznowiony. Oryginalne wiadomości opcjonalnie mogą być
 usunięte po udanym przesłaniu.
 
