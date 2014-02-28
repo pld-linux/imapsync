@@ -12,12 +12,12 @@ Source0:	https://fedorahosted.org/released/imapsync/%{name}-%{version}.tgz
 URL:		http://imapsync.lamiral.info/
 BuildRequires:	perl-Date-Manip
 BuildRequires:	perl-File-Copy-Recursive
-BuildRequires:	perl-Mail-IMAPClient
+BuildRequires:	perl-Mail-IMAPClient >= 3.29
 BuildRequires:	perl-Term-ReadKey
 BuildRequires:	rpm-perlprov >= 4.1-13
 BuildRequires:	rpmbuild(macros) >= 1.202
 Requires:	perl-Date-Manip
-Requires:	perl-Mail-IMAPClient
+Requires:	perl-Mail-IMAPClient >= 3.29
 Requires:	perl-Term-ReadKey
 BuildArch:	noarch
 BuildRoot:	%{tmpdir}/%{name}-%{version}-root-%(id -u -n)
