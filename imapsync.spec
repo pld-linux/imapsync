@@ -2,23 +2,27 @@
 Summary:	Mailboxes synchronization tool
 Summary(pl.UTF-8):	Narzędzie do synchroniczacji skrzynek pocztowych
 Name:		imapsync
-Version:	1.584
+Version:	1.607
 Release:	1
 License:	NOLIMIT Public License
 Group:		Applications/Mail
 #Source0:	http://www.linux-france.org/prj/imapsync/dist/%{name}-%{version}.tgz
 Source0:	https://fedorahosted.org/released/imapsync/%{name}-%{version}.tgz
-# Source0-md5:	08076c3108b1d39e2dfc328d348f0d96
+# Source0-md5:	a0bca08a33ba2d9274a78e7374ee2d1a
 URL:		http://imapsync.lamiral.info/
 BuildRequires:	perl-Date-Manip
 BuildRequires:	perl-File-Copy-Recursive
+BuildRequires:	perl-IO-Tee
 BuildRequires:	perl-Mail-IMAPClient >= 3.29
 BuildRequires:	perl-Term-ReadKey
+BuildRequires:	perl-Unicode-String
 BuildRequires:	rpm-perlprov >= 4.1-13
 BuildRequires:	rpmbuild(macros) >= 1.202
 Requires:	perl-Date-Manip
+Requires:	perl-IO-Tee
 Requires:	perl-Mail-IMAPClient >= 3.29
 Requires:	perl-Term-ReadKey
+Requires:	perl-Unicode-String
 BuildArch:	noarch
 BuildRoot:	%{tmpdir}/%{name}-%{version}-root-%(id -u -n)
 
