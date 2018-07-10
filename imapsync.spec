@@ -6,20 +6,36 @@ Version:	1.882
 Release:	1
 License:	NOLIMIT Public License
 Group:		Applications/Mail
-Source0:	https://github.com/imapsync/imapsync/archive/imapsync-%{version}.tar.gz
+Source0:	https://github.com/imapsync/imapsync/archive/%{name}-%{version}.tar.gz
 # Source0-md5:	00b650f03165ecfeb6712151d5175ea1
 URL:		http://imapsync.lamiral.info/
 BuildRequires:	cpanminus
+BuildRequires:	perl-Authen-NTLM
+BuildRequires:	perl-Crypt-OpenSSL-RSA
 BuildRequires:	perl-Data-Uniqid
 BuildRequires:	perl-Date-Manip
+BuildRequires:	perl-Dist-CheckConflicts
 BuildRequires:	perl-File-Copy-Recursive
+BuildRequires:	perl-IO-Socket-INET6
+BuildRequires:	perl-IO-Socket-SSL
 BuildRequires:	perl-IO-Tee
+BuildRequires:	perl-JSON-WebToken
 BuildRequires:	perl-Mail-IMAPClient >= 3.29
 BuildRequires:	perl-Module-ScanDeps
+BuildRequires:	perl-Net-SSLeay
 BuildRequires:	perl-PAR-Packer
+BuildRequires:	perl-Package-Stash-XS
+BuildRequires:	perl-Readonly
+BuildRequires:	perl-Regexp-Common
 BuildRequires:	perl-Sys-MemInfo
 BuildRequires:	perl-Term-ReadKey
+BuildRequires:	perl-Test-Deep
+BuildRequires:	perl-Test-Fatal
 BuildRequires:	perl-Test-MockObject
+BuildRequires:	perl-Test-NoWarnings
+BuildRequires:	perl-Test-Pod
+BuildRequires:	perl-Test-Requires
+BuildRequires:	perl-Test-Warn
 BuildRequires:	perl-Unicode-String
 BuildRequires:	rpm-perlprov >= 4.1-13
 BuildRequires:	rpmbuild(macros) >= 1.202
