@@ -39,11 +39,22 @@ BuildRequires:	perl-Test-Warn
 BuildRequires:	perl-Unicode-String
 BuildRequires:	rpm-perlprov >= 4.1-13
 BuildRequires:	rpmbuild(macros) >= 1.202
+Requires:	perl-Authen-NTLM
+Requires:	perl-Data-Uniqid
 Requires:	perl-Date-Manip
+Requires:	perl-Digest-HMAC
+Requires:	perl-File-Copy-Recursive
+Requires:	perl-HTML-Parser
 Requires:	perl-IO-Tee
+Requires:	perl-JSON
+Requires:	perl-JSON-WebToken
+Requires:	perl-LWP
 Requires:	perl-Mail-IMAPClient >= 3.29
 Requires:	perl-Term-ReadKey
+Requires:	perl-Test-MockObject
+Requires:	perl-URI
 Requires:	perl-Unicode-String
+Requires:	perl-libwww
 BuildArch:	noarch
 BuildRoot:	%{tmpdir}/%{name}-%{version}-root-%(id -u -n)
 
