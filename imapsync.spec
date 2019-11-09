@@ -3,11 +3,12 @@ Summary:	Mailboxes synchronization tool
 Summary(pl.UTF-8):	Narzędzie do synchroniczacji skrzynek pocztowych
 Name:		imapsync
 Version:	1.882
-Release:	2
+Release:	3
 License:	NOLIMIT Public License
 Group:		Applications/Mail
 Source0:	https://github.com/imapsync/imapsync/archive/%{name}-%{version}.tar.gz
 # Source0-md5:	00b650f03165ecfeb6712151d5175ea1
+Patch0:		no-prereq-install.patch
 URL:		http://imapsync.lamiral.info/
 BuildRequires:	cpanminus
 BuildRequires:	perl-Authen-NTLM
@@ -77,6 +78,7 @@ usunięte po udanym przesłaniu.
 
 %prep
 %setup -q -n %{name}-%{name}-%{version}
+%patch0 -p1
 
 %build
 %{__make}
