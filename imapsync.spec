@@ -1,12 +1,12 @@
 Summary:	Mailboxes synchronization tool
 Summary(pl.UTF-8):	Narzędzie do synchroniczacji skrzynek pocztowych
 Name:		imapsync
-Version:	1.882
-Release:	3
+Version:	1.945
+Release:	1
 License:	NOLIMIT Public License
 Group:		Applications/Mail
 Source0:	https://github.com/imapsync/imapsync/archive/%{name}-%{version}.tar.gz
-# Source0-md5:	00b650f03165ecfeb6712151d5175ea1
+# Source0-md5:	772b7d6fe46ef801421cb4d48c59b834
 Patch0:		no-prereq-install.patch
 URL:		http://imapsync.lamiral.info/
 BuildRequires:	cpanminus
@@ -78,6 +78,19 @@ usunięte po udanym przesłaniu.
 %prep
 %setup -q -n %{name}-%{name}-%{version}
 %patch0 -p1
+
+sed -E -i -e '1s,#!\s*/usr/bin/env\s+python2(\s|$),#!%{__python}\1,' -e '1s,#!\s*/usr/bin/env\s+python(\s|$),#!%{__python}\1,' -e '1s,#!\s*/usr/bin/python(\s|$),#!%{__python}\1,' \
+      W/tools/addFromIfMissing2 \
+      W/tools/fix_email_for_exchange.py \
+      W/tools/html5check.py \
+      W/tools/postman_imapsync.py
+
+sed -E -i -e '1s,#!\s*/usr/bin/env\s+perl(\s|$),#!%{__perl}\1,' \
+      imapsync \
+      imapsync-1.921
+
+sed -E -i -e '1s,#!\s*/usr/bin/env\s+(.*),#!%{__bindir}\1,' \
+      W/tools/wonko_ruby_imapsync
 
 %build
 %{__make}
