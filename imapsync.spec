@@ -1,4 +1,4 @@
-%bcond_with     tests
+%bcond_with  tests
 Summary:	Mailboxes synchronization tool
 Summary(pl.UTF-8):	Narzędzie do synchroniczacji skrzynek pocztowych
 Name:		imapsync
@@ -41,13 +41,15 @@ BuildRequires:	perl-Unicode-String
 BuildRequires:	rpm-perlprov >= 4.1-13
 BuildRequires:	rpmbuild(macros) >= 1.202
 %if %{with tests}
-BuildRequires:  perl-Encode-IMAPUTF7
-BuildRequires:  time
+BuildRequires:	perl-Encode-IMAPUTF7
+BuildRequires:	perl-File-Tail
+BuildRequires:	time
 %endif
 Requires:	perl-Authen-NTLM
 Requires:	perl-Data-Uniqid
 Requires:	perl-Date-Manip
 Requires:	perl-Digest-HMAC
+Requires:	perl-Encode-IMAPUTF7
 Requires:	perl-File-Copy-Recursive
 Requires:	perl-HTML-Parser
 Requires:	perl-IO-Tee
