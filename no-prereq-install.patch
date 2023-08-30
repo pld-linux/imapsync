@@ -1,16 +1,16 @@
 --- imapsync-imapsync-1.882/Makefile~	2018-05-07 16:04:51.000000000 +0200
 +++ imapsync-imapsync-1.882/Makefile	2019-11-09 13:37:46.838978808 +0100
-@@ -93,7 +93,7 @@
- 	@echo "$(DISTRO)"
+@@ -90,7 +90,7 @@ hello:
+ 	@echo "DISTRO           $(DISTRO)"
  
  
--all: doc VERSION biz prereq allcritic bin VERSION_EXE 
-+all: doc VERSION biz allcritic bin VERSION_EXE 
+-all: doc VERSION biz prereq allcritic 
++all: doc VERSION biz allcritic 
  
- testp :
+ testp:
  	sh INSTALL.d/prerequisites_imapsync
-@@ -165,7 +165,7 @@
- W/imapsync.1: imapsync
+@@ -162,7 +162,7 @@ W/imapsync.1: imapsync
+ 	mkdir -p W
  	pod2man imapsync > W/imapsync.1
  
 -install: testp W/imapsync.1
@@ -18,3 +18,4 @@
  	mkdir -p $(DESTDIR)$(PREFIX)/bin
  	install imapsync $(DESTDIR)$(PREFIX)/bin/imapsync
  	chmod 755 $(DESTDIR)$(PREFIX)/bin/imapsync
+

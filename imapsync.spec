@@ -1,12 +1,13 @@
+%bcond_with     tests
 Summary:	Mailboxes synchronization tool
 Summary(pl.UTF-8):	Narzędzie do synchroniczacji skrzynek pocztowych
 Name:		imapsync
-Version:	1.945
+Version:	2.229
 Release:	1
 License:	NOLIMIT Public License
 Group:		Applications/Mail
 Source0:	https://github.com/imapsync/imapsync/archive/%{name}-%{version}.tar.gz
-# Source0-md5:	772b7d6fe46ef801421cb4d48c59b834
+# Source0-md5:	efae792ba984469ec106573a0141f56c
 Patch0:		no-prereq-install.patch
 URL:		http://imapsync.lamiral.info/
 BuildRequires:	cpanminus
@@ -39,6 +40,10 @@ BuildRequires:	perl-Test-Warn
 BuildRequires:	perl-Unicode-String
 BuildRequires:	rpm-perlprov >= 4.1-13
 BuildRequires:	rpmbuild(macros) >= 1.202
+%if %{with tests}
+BuildRequires:  perl-Encode-IMAPUTF7
+BuildRequires:  time
+%endif
 Requires:	perl-Authen-NTLM
 Requires:	perl-Data-Uniqid
 Requires:	perl-Date-Manip
@@ -79,21 +84,13 @@ usunięte po udanym przesłaniu.
 %setup -q -n %{name}-%{name}-%{version}
 %patch0 -p1
 
-sed -E -i -e '1s,#!\s*/usr/bin/env\s+python2(\s|$),#!%{__python}\1,' -e '1s,#!\s*/usr/bin/env\s+python(\s|$),#!%{__python}\1,' -e '1s,#!\s*/usr/bin/python(\s|$),#!%{__python}\1,' \
-      W/tools/addFromIfMissing2 \
-      W/tools/fix_email_for_exchange.py \
-      W/tools/html5check.py \
-      W/tools/postman_imapsync.py
-
 sed -E -i -e '1s,#!\s*/usr/bin/env\s+perl(\s|$),#!%{__perl}\1,' \
-      imapsync \
-      imapsync-1.921
-
-sed -E -i -e '1s,#!\s*/usr/bin/env\s+(.*),#!%{__bindir}\1,' \
-      W/tools/wonko_ruby_imapsync
+      imapsync
 
 %build
 %{__make}
+
+%{?with_tests:%{__make} tests}
 
 %install
 rm -rf $RPM_BUILD_ROOT
