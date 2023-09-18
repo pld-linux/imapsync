@@ -1,0 +1,12 @@
+diff -ur imapsync-imapsync-2.229.org/imapsync imapsync-imapsync-2.229/imapsync
+--- imapsync-imapsync-2.229.org/imapsync	2022-10-25 04:21:25.000000000 +0200
++++ imapsync-imapsync-2.229/imapsync	2023-09-18 09:25:56.889907974 +0200
+@@ -1276,7 +1276,7 @@
+ 
+ Readonly my $NUMBER_20_000 => 20_000 ;
+ 
+-Readonly my $QUOTA_PERCENT_LIMIT => 90 ;
++Readonly my $QUOTA_PERCENT_LIMIT => 99 ;
+ 
+ Readonly my $NUMBER_104_857_600 => 104_857_600 ;
+ 
