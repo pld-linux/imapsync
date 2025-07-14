@@ -85,8 +85,8 @@ usunięte po udanym przesłaniu.
 
 %prep
 %setup -q -n %{name}-%{name}-%{version}
-%patch0 -p1
-%patch1 -p1
+%patch -P0 -p1
+%patch -P1 -p1
 
 sed -E -i -e '1s,#!\s*/usr/bin/env\s+perl(\s|$),#!%{__perl}\1,' \
       imapsync
