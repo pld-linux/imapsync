@@ -3,7 +3,7 @@ Summary:	Mailboxes synchronization tool
 Summary(pl.UTF-8):	Narzędzie do synchroniczacji skrzynek pocztowych
 Name:		imapsync
 Version:	2.314
-Release:	1
+Release:	2
 License:	NOLIMIT Public License
 Group:		Applications/Mail
 Source0:	https://github.com/imapsync/imapsync/archive/%{name}-%{version}.tar.gz
@@ -47,6 +47,8 @@ BuildRequires:	perl-File-Tail
 BuildRequires:	time
 %endif
 Requires:	perl-Authen-NTLM
+Requires:	perl-Crypt-OpenSSL-PKCS12
+Requires:	perl-Crypt-OpenSSL-RSA
 Requires:	perl-Data-Uniqid
 Requires:	perl-Date-Manip
 Requires:	perl-HTML-Parser
