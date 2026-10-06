@@ -2,12 +2,12 @@
 Summary:	Mailboxes synchronization tool
 Summary(pl.UTF-8):	Narzędzie do synchroniczacji skrzynek pocztowych
 Name:		imapsync
-Version:	2.229
-Release:	2
+Version:	2.314
+Release:	1
 License:	NOLIMIT Public License
 Group:		Applications/Mail
 Source0:	https://github.com/imapsync/imapsync/archive/%{name}-%{version}.tar.gz
-# Source0-md5:	efae792ba984469ec106573a0141f56c
+# Source0-md5:	aac2f3a359c461aea30bdc90d9528f66
 Patch0:		no-prereq-install.patch
 Patch1:         defaults.patch
 URL:		http://imapsync.lamiral.info/
@@ -22,7 +22,7 @@ BuildRequires:	perl-IO-Socket-INET6
 BuildRequires:	perl-IO-Socket-SSL
 BuildRequires:	perl-IO-Tee
 BuildRequires:	perl-JSON-WebToken
-BuildRequires:	perl-Mail-IMAPClient >= 3.29
+BuildRequires:	perl-Mail-IMAPClient >= 3.30
 BuildRequires:	perl-Module-ScanDeps
 BuildRequires:	perl-Net-SSLeay
 BuildRequires:	perl-PAR-Packer
@@ -49,18 +49,11 @@ BuildRequires:	time
 Requires:	perl-Authen-NTLM
 Requires:	perl-Data-Uniqid
 Requires:	perl-Date-Manip
-Requires:	perl-Digest-HMAC
-Requires:	perl-Encode-IMAPUTF7
-Requires:	perl-File-Copy-Recursive
 Requires:	perl-HTML-Parser
-Requires:	perl-IO-Tee
 Requires:	perl-JSON
 Requires:	perl-JSON-WebToken
-Requires:	perl-Mail-IMAPClient >= 3.29
-Requires:	perl-Term-ReadKey
 Requires:	perl-Test-MockObject
 Requires:	perl-URI
-Requires:	perl-Unicode-String
 Requires:	perl-libwww
 BuildArch:	noarch
 BuildRoot:	%{tmpdir}/%{name}-%{version}-root-%(id -u -n)
